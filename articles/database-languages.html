@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mobile.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Database Languages</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="navbar">
+        <h1 class="logo">
+            <a href="../index.html"><span class="text-primary"><i class="fa-solid fa-blog"></i>My</span>Blog</a>
+        </h1>
+        <form action="#">
+            <div class="form-box">
+                <input type="email" placeholder="Enter your email...">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Article -->
+    <div id="article">
+        <div class="container">
+            <div class="page-container">
+                <article class="card">
+                    <header>
+                        <h2 class="l-heading bold">Database Languages</h2>
+                        <div class="meta">
+                            <small>
+                                <i class="fas fa-user"></i> Written By Ajinkya Dhatrak April 04, 2023
+                            </small>
+                            <div class="socials">
+                                <a aria-label="go to twitter" href="https://twitter.com/" target="_blank" class="ref"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a aria-label="go to facebook" href="https://www.facebook.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a aria-label="go to linkedin" href="https://www.linkedin.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <div class="category category-dbms">DBMS</div>
+                        </div>
+                    </header>
+                    <div class="py-3">
+                        <p class="l-para">The SQL commands are mainly categorized into five categories as below: </p>
+                        <figure>
+                            <img src="../images/database/database-poster.png" alt="">
+                            <figcaption>
+                                Photo by <a
+                                    href="https://www.istockphoto.com/portfolio/islander11?mediatype=photography"
+                                    class="ref" target="_blank">Amphor
+                                    Lamlukka</a> from <a href="https://www.istockphoto.com/" class="ref"
+                                    target="_blank">iStock</a>
+                            </figcaption>
+                        </figure>
+
+                        <h3>1. DDL &#8209; Data Definition Language</h3>
+                        <ol>
+                            <li>DDL or Data Definition Language actually consists of the SQL commands that can be used
+                                to define the
+                                database schema. </li>
+                            <li>It simply deals with descriptions of the database schema and is used to create and
+                                modify the structure of
+                                database objects in the database. </li>
+                            <li>DDL is a set of SQL commands used to create, modify, and delete database structures but
+                                not data. </li>
+                        </ol>
+                        <p>These commands are normally not used by a general user, who shoold be accessing the database
+                            via an application.
+                        </p>
+                        <p>List of DDL commands: </p>
+                        <ol>
+                            <li><strong>CREATE:</strong> This command is used to create the database or its objects
+                                (like table, index,
+                                function, views,
+                                store procedure, and triggers).</li>
+                            <li><strong>DROP:</strong> This command is used to delete objects from the database.</li>
+                            <li><strong>ALTER:</strong> This is used to alter the structure of the database.</li>
+                            <li><strong>TRUNCATE:</strong> This is used to remove all records from a table, including
+                                all spaces
+                                allocated for the records
+                                are removed.</li>
+                            <li><strong>COMMENT:</strong> This is used to add comments to the data dictionary.</li>
+                            <li><strong>RENAME:</strong> This is used to rename an object existing in the database.</li>
+                        </ol>
+
+                        <h3>2. DQL &#8209; Data Query Language</h3>
+                        <ol>
+                            <li>DQL statements are used for performing queries on the data within schema objects. </li>
+                            <li>The purpose of the DQL Command is to get some schema relation based on the query passed
+                                to it. </li>
+                            <li>We can define DQL as follows it is a component of SQL statement that allows getting data
+                                from the database
+                                and imposing order upon it. </li>
+                            <li>It includes the SELECT statement. </li>
+                            <li>This command allows getting the data out of the database to perform operations with it.
+                            </li>
+                            <li>When a SELECT is fired against a table or tables the resolt is compiled into a further
+                                temporary table,
+                                which is displayed or perhaps received by the program i.e. a front-end.</li>
+                        </ol>
+                        <p>List of DQL commands: </p>
+                        <ol>
+                            <li><strong>SELECT:</strong> It is used to retrieve data from the database.</li>
+                        </ol>
+
+                        <h3>3. DML &#8209; Data Manipolation Language</h3>
+                        <ol>
+                            <li>The SQL commands that deals with the manipolation of data present in the database belong
+                                to DML or Data
+                                Manipolation Language and this includes most of the SQL statements. </li>
+                            <li>It is the component of the SQL statement that controls access to data and to the
+                                database.</li>
+                            <li>Basically, DCL statements are grouped with DML statements.</li>
+                        </ol>
+                        <p>List of DML commands:</p>
+                        <ol>
+                            <li><strong>INSERT:</strong> It is used to insert data into a table.</li>
+                            <li><strong>UPDATE:</strong> It is used to update existing data within a table.</li>
+                            <li><strong>DELETE:</strong> It is used to delete records from a database table.</li>
+                            <li><strong>LOCK:</strong> Table control concurrency.</li>
+                            <li><strong>CALL:</strong> Call a PL/SQL or JAVA subprogram.</li>
+                            <li><strong>EXPLAIN PLAN:</strong> It describes the access path to data.</li>
+                        </ol>
+
+                        <h3>4. DCL &#8209; Data Control Language</h3>
+                        <ol>
+                            <li>DCL includes commands such as GRANT and REVOKE which mainly deal with the rights,
+                                permissions, and other
+                                controls of the database system.</li>
+                        </ol>
+                        <p>List of DCL commands: </p>
+                        <ol>
+                            <li><strong>GRANT:</strong> This command gives users access privileges to the database.</li>
+                            <li><strong>REVOKE:</strong> This command withdraws the user&apos;s access privileges given
+                                by using the
+                                GRANT
+                                command.</li>
+                        </ol>
+
+                        <h3>5. TCL &#8209; Transaction Control Language</h3>
+                        <ol>
+                            <li>Transactions group a set of tasks into a single execution unit. </li>
+                            <li>Each transaction begins with a specific task and ends when all the tasks in the group
+                                successfolly complete.
+                            </li>
+                            <li>If any of the tasks fail, the transaction fails. </li>
+                            <li>Therefore, a transaction has only two resolts: success or failure. </li>
+                            <li>You can explore more about transactions here.</li>
+                        </ol>
+                        <p>List of TCL commands: </p>
+                        <ol>
+                            <li><strong>BEGIN:</strong> Opens a Transaction.</li>
+                            <li><strong>COMMIT:</strong> Commits a Transaction.</li>
+                            <li><strong>ROLLBACK:</strong> Rollbacks a transaction in case of any error occurs.</li>
+                            <li><strong>SAVEPOINT:</strong> Sets a save point within a transaction.</li>
+                            <li><strong>SET TRANSACTION:</strong> Specifies characteristics for the transaction.</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <aside id="about" class="card">
+                    <img src="../images/avatar.png" alt="avatar">
+                    <h4>Ajinkya Dhatrak</h4>
+                    <p>Love to explore and learn new concepts.</p>
+                    <a href="#" class="btn btn-dark">Follow</a>
+                </aside>
+
+                <aside id="categories" class="card">
+                    <h2>Categories</h2>
+                    <ul class="list">
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Searching</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Sorting</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> DBMS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OOP</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-dark py-2">
+        <div class="container footer-container">
+            <p>Copyright &copy; 2023, All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

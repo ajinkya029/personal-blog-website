@@ -1,0 +1,28 @@
+.category {
+  display: inline-block;
+  color: var(--light-color);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.category-searching {
+  background: var(--searching-color);
+}
+
+.category-sorting {
+  background: var(--sorting-color);
+}
+.category-os {
+  background: var(--os-color);
+}
+
+.category-dbms {
+  background: var(--dbms-color);
+}
+
+.category-oop {
+  background: var(--oop-color);
+}

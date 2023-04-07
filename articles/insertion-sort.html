@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mobile.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Sorting Algorithms: Insertion Sort</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="navbar">
+        <h1 class="logo">
+            <a href="../index.html"><span class="text-primary"><i class="fa-solid fa-blog"></i>My</span>Blog</a>
+        </h1>
+        <form action="#">
+            <div class="form-box">
+                <input type="email" placeholder="Enter your email...">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Article -->
+    <div id="article">
+        <div class="container">
+            <div class="page-container">
+                <article class="card">
+                    <header>
+                        <h2 class="l-heading bold">Sorting Algorithms: Insertion Sort</h2>
+                        <div class="meta">
+                            <small>
+                                <i class="fas fa-user"></i> Written By Ajinkya Dhatrak March 29, 2023
+                            </small>
+                            <div class="socials">
+                                <a aria-label="go to twitter" href="https://twitter.com/" target="_blank" class="ref"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a aria-label="go to facebook" href="https://www.facebook.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a aria-label="go to linkedin" href="https://www.linkedin.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <div class="category category-sorting">Sorting</div>
+                        </div>
+                    </header>
+                    <div class="py-3">
+                        <h3>Sorting Algorithms: Insertion Sort
+                        </h3>
+                        <p>Detailed understanding of the working of the insertion sort algorithm and its
+                            implementation in
+                            C++
+                        </p>
+                        <figure>
+                            <img src="../images/insertion-sort/insertion-sort-poster.png" alt="">
+                            <figcaption>Image from <a href="https://caliberleadership.com/develop-leaders/" class="ref"
+                                    target="_blank">caliberleadership
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <p>In this article, I&apos;ll be covering insertion sort algorithm. Most programming languages
+                            will
+                            come
+                            with a built-in sort function
+                            but in order to write better code, you need to know what&apos;s going on in the background.
+                            If
+                            you are preparing for software
+                            engineering interviews, it&apos;s very likely that this sorting algorithm may come
+                            up
+                            during your interviews.</p>
+
+                        <h3>What is Insertion Sort?
+                        </h3>
+                        <p>Insertion sort does not score high on performance but it is a simple sorting algorithm to
+                            understand and implement.</p>
+                        <h3>How Does it Work?
+                        </h3>
+                        <p>Let&apos;s have a look at the array we want to sort:
+                        </p>
+                        <img src="../images/insertion-sort/insertion-sort-working-1.png" alt="">
+                        <p>The way we are going to sort this list is to look at the first value in the array and
+                            consider it sorted (tentatively).
+                            The first element is in our array is 6, so we consider 6 as sorted and everything to the
+                            right of 6 as unsorted.</p>
+                        <p>Then we have a look at the rest of the array to the right of 6. We are going to iterate
+                            through each value and insert it
+                            into our “sorted” array.</p>
+                        <p>In the diagram below, blue is “sorted” and red is our current value we are working with:</p>
+                        <img src="../images/insertion-sort/insertion-sort-working-2.png" alt="">
+                        <p>We look at our current value = 3 and we look at the sorted part. Where does 3 go in the
+                            sorted part? It goes before 6 so
+                            lets swap them:</p>
+                        <img src="../images/insertion-sort/insertion-sort-working-3.png" alt="">
+                        <p>So far so good! Our next current value is 9. Is 9 less than 6? No, it isn&apos;t so 9 is in
+                            its
+                            correct position.</p>
+                        <img src="../images/insertion-sort/insertion-sort-working-4.png" alt="">
+                        <p>Ok. Current = 8. Is 8 less than 9? Yup. Let&apos;s swap:
+                        </p>
+                        <img src="../images/insertion-sort/insertion-sort-working-5.png" alt="">
+                        <p>Current = 4. Is 4 less than 9? Swap:
+                        </p>
+                        <img src="../images/insertion-sort/insertion-sort-working-6.png" alt="">
+                        <p>4 is still red because it hasn&apos;t completed being sorted. Is 4 less than 8? less than 6?
+                            We
+                            don&apos;t stop working with 4
+                            until everything to its left is less than or equal to it:
+                        </p>
+                        <img src="../images/insertion-sort/insertion-sort-working-7.png" alt="">
+                        <p>Current = 6:
+                        </p>
+                        <img src="../images/insertion-sort/insertion-sort-working-8.png" alt="">
+                        <p>Current = 5:
+                        </p>
+                        <img src="../images/insertion-sort/insertion-sort-working-9.png" alt="">
+                        <p>Current = 2:
+                        </p>
+                        <img src="../images/insertion-sort/insertion-sort-working-10.png" alt="">
+                        <p>And we are done!
+                        </p>
+
+                        <h3>Code</h3>
+                        <pre>
+<code>
+    #include &lt;bits/stdc++.h&gt;
+    using namespace std;
+
+    void insertion_sort(int arr[], int n) {
+        for (int i = 0; i &lt;= n - 1; i++) {
+            int j = i;
+            while (j > 0 && arr[j - 1] > arr[j]) {
+                int temp = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = temp;
+                j--;
+            }
+        }
+
+        cout &lt;&lt; "After Using insertion sort: " &lt;&lt; "\n";
+        for (int i = 0; i &lt; n; i++) {
+            cout &lt;&lt; arr[i] &lt;&lt; " ";
+        }
+        cout &lt;&lt; "\n";
+    }
+
+    int main()
+    {
+        int arr[] = {13, 46, 24, 52, 20, 9};
+        int n = sizeof(arr) / sizeof(arr[0]);
+        cout &lt;&lt; "Before Using insertion Sort: " &lt;&lt; endl;
+        for (int i = 0; i &lt; n; i++)
+        {
+            cout &lt;&lt; arr[i] &lt;&lt; " ";
+        }
+        cout &lt;&lt; endl;
+
+        insertion_sort(arr, n);
+        return 0;
+    }
+</code>
+</pre>
+
+                        <h3>Output</h3>
+                        <pre>
+<samp>
+    Before insertion sort:
+    <strong>13 46 24 52 20 9</strong>
+    After insertion sort:
+    <strong>9 13 20 24 46 52</strong>
+</samp>
+</pre>
+
+                        <h3>Time & Space Complexity</h3>
+                        <p>
+                            Time complexity: <strong>O(N<sup>2</sup>)</strong>, (where N = size of the array), for the
+                            worst, and average
+                            cases.<br>
+                            Space Complexity: <strong>O(1)</strong><br>
+                        </p>
+                    </div>
+                </article>
+
+                <aside id="about" class="card">
+                    <img src="../images/avatar.png" alt="avatar">
+                    <h4>Ajinkya Dhatrak</h4>
+                    <p>Love to explore and learn new concepts.</p>
+                    <a href="#" class="btn btn-dark">Follow</a>
+                </aside>
+
+                <aside id="categories" class="card">
+                    <h2>Categories</h2>
+                    <ul class="list">
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Searching</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Sorting</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> DBMS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OOP</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-dark py-2">
+        <div class="container footer-container">
+            <p>Copyright &copy; 2023, All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

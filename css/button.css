@@ -1,0 +1,30 @@
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--dark-color);
+  color: var(--light-color);
+  padding: 0.5rem 1.5rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-light {
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}

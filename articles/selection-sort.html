@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mobile.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Sorting Algorithms: Selection Sort</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="navbar">
+        <h1 class="logo">
+            <a href="../index.html"><span class="text-primary"><i class="fa-solid fa-blog"></i>My</span>Blog</a>
+        </h1>
+        <form action="#">
+            <div class="form-box">
+                <input type="email" placeholder="Enter your email...">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Article -->
+    <div id="article">
+        <div class="container">
+            <div class="page-container">
+                <article class="card">
+                    <header>
+                        <h2 class="l-heading bold">Sorting Algorithms: Selection Sort</h2>
+                        <div class="meta">
+                            <small>
+                                <i class="fas fa-user"></i> Written By Ajinkya Dhatrak March 28, 2023
+                            </small>
+                            <div class="socials">
+                                <a aria-label="go to twitter" href="https://twitter.com/" target="_blank" class="ref"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a aria-label="go to facebook" href="https://www.facebook.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a aria-label="go to linkedin" href="https://www.linkedin.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <div class="category category-sorting">Sorting</div>
+                        </div>
+                    </header>
+                    <div class="py-3">
+                        <h3>Sorting Algorithms: Selection Sort
+                        </h3>
+                        <p>Detailed understanding of the working of the selection sort algorithm and its
+                            implementation in
+                            C++
+                        </p>
+                        <figure>
+                            <img src="../images/selection-sort/selection-sort-poster.png" alt="">
+                            <figcaption>Image from <a
+                                    href="https://www.ecoandbeyond.co/articles/best-non-dairy-milk-for-coffee/"
+                                    class="ref" target="_blank">ecoandbeyond
+                                </a>
+                            </figcaption>
+                        </figure>
+                        <p>In this article, I&apos;ll be covering selection sort algorithm. Most programming languages
+                            will
+                            come
+                            with a built-in sort function
+                            but in order to write better code, you need to know what&apos;s going on in the background.
+                            If
+                            you are preparing for software
+                            engineering interviews, it&apos;s very likely that this sorting algorithm may come
+                            up
+                            during your interviews.</p>
+                        <h3>What is Selection Sort?
+                        </h3>
+                        <p>Selection Sort is the third in our list of easy-to-understand algorithms (Bubble Sort and
+                            Insertion Sort being the first
+                            two). Similar to Bubble and Insertion sorting algorithms, Selection Sort is not a fast
+                            algorithm but nonetheless,
+                            important to know.</p>
+                        <h3>How Does it Work?
+                        </h3>
+                        <p>Let&apos;s have a look at the array we want to sort:
+                        </p>
+                        <img src="../images/selection-sort/selection-sort-working-1.png" alt="">
+                        <p>The way we are going to sort this list is by dividing it into two separate lists within that
+                            list. One sublist will
+                            represent our sorted numbers and the other will represent our unsorted numbers. Initially,
+                            our entire array represents
+                            the unsorted list.</p>
+                        <p>We are going to search through our array for the smallest number. Once we have found the
+                            smallest number, we append it
+                            to our sorted list (i.e. make room for it in the beginning of the array). This happens
+                            in-place in the input array.
+                        </p>
+                        <img src="../images/selection-sort/selection-sort-working-2.png" alt="">
+                        <p>If we traverse through our array, we start at index 0 and consider whatever is there as our
+                            smallest value.
+                        </p>
+                        <p>Continue to traverse the array and if you find any value that is smaller than what is saved
+                            before, change the smallest
+                            value to the new one. So if smallest=6 and we go to the next index, we see that 3 is smaller
+                            than 6 so smallest now
+                            equals 3. Continue through the entire array until you have found the smallest value. In our
+                            case, we find that 2 is the
+                            smallest value.
+                        </p>
+                        <p>Now what? Take the leftmost value and swap it with your smallest value. Your array is now
+                            split in two: the blue portion
+                            is the sorted array and the rest is the unsorted array. Let&apos;s see another iteration:
+                        </p>
+                        <img src="../images/selection-sort/selection-sort-working-3.png" alt="">
+                        <p>This time our unsorted array starts from index 1 because our sorted array has reserved index
+                            0. We set smallest to what
+                            is in index 1 (smallest=3). We will compare smallest with every other value in the array, if
+                            there is any value that is
+                            smaller, we set smallest to that value. In this case, we see that 3 is the smallest value.
+                            We don&apos;t need to swap 3 with
+                            itself so 3 now becomes part of the sorted array.
+                        </p>
+                        <p>Next iteration:
+                        </p>
+                        <img src="../images/selection-sort/selection-sort-working-4.png" alt="">
+                        <p>We start at index 2 with smallest= 9. After going through the whole array, we find that 4 is
+                            the smallest value. 9 and 4
+                            swap.
+                        </p>
+                        <p>We continue to increase the size of our sorted array in this manner until we get the fully
+                            sorted array:
+                        </p>
+                        <img src="../images/selection-sort/selection-sort-working-5.png" alt="">
+
+                        <h3>Code</h3>
+                        <pre>
+<code>
+    #include&lt;bits/stdc++.h&gt;
+    using namespace std;
+        
+    void selection_sort(int arr[], int n) {
+        // selection sort
+        for (int i = 0; i &lt; n - 1; i++) {
+            int mini = i;
+            for (int j = i + 1; j &lt; n; j++) {
+                if (arr[j] &lt; arr[mini]) {
+                    mini = j;
+                }
+            }
+            int temp = arr[mini];
+            arr[mini] = arr[i];
+            arr[i] = temp;
+        }
+
+        cout &lt;&lt; "After selection sort: " &lt;&lt; "\n";
+        for (int i = 0; i &lt; n; i++) {
+            cout &lt;&lt; arr[i] &lt;&lt; " ";
+        }
+        cout &lt;&lt; "\n";
+
+    }
+    int main() {
+        int arr[] = {13,46,24,52,20,9};
+        int n = sizeof(arr) / sizeof(arr[0]);
+        cout &lt;&lt; "Before selection sort: " &lt;&lt; "\n";
+        for (int i = 0; i &lt; n; i++) {
+            cout &lt;&lt; arr[i] &lt;&lt; " ";
+        }
+        cout &lt;&lt; "\n";
+        selection_sort(arr, n);
+        return 0;
+    }
+</code>
+</pre>
+                        <h3>Output</h3>
+                        <pre>
+<samp>
+    Before selection sort:
+    <strong>13 46 24 52 20 9</strong>
+    After selection sort:
+    <strong>9 13 20 24 46 52</strong>
+</samp>
+</pre>
+
+                        <h3>Time & Space Complexity</h3>
+                        <p>
+                            Time complexity: <strong>O(N<sup>2</sup>)</strong>, (where N = size of the array), for the
+                            best, worst, and
+                            average cases.<br>
+                            Space Complexity: <strong>O(1)</strong><br>
+                        </p>
+                    </div>
+                </article>
+
+                <aside id="about" class="card">
+                    <img src="../images/avatar.png" alt="avatar">
+                    <h4>Ajinkya Dhatrak</h4>
+                    <p>Love to explore and learn new concepts.</p>
+                    <a href="#" class="btn btn-dark">Follow</a>
+                </aside>
+
+                <aside id="categories" class="card">
+                    <h2>Categories</h2>
+                    <ul class="list">
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Searching</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Sorting</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> DBMS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OOP</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-dark py-2">
+        <div class="container footer-container">
+            <p>Copyright &copy; 2023, All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

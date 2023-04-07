@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mobile.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>What Is Inheritance?</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="navbar">
+        <h1 class="logo">
+            <a href="../index.html"><span class="text-primary"><i class="fa-solid fa-blog"></i>My</span>Blog</a>
+        </h1>
+        <form action="#">
+            <div class="form-box">
+                <input type="email" placeholder="Enter your email...">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Article -->
+    <div id="article">
+        <div class="container">
+            <div class="page-container">
+                <article class="card">
+                    <header>
+                        <h2 class="l-heading bold">What Is Inheritance?</h2>
+                        <div class="meta">
+                            <small>
+                                <i class="fas fa-user"></i> Written By Ajinkya Dhatrak April 03, 2023
+                            </small>
+                            <div class="socials">
+                                <a aria-label="go to twitter" href="https://twitter.com/" target="_blank" class="ref"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a aria-label="go to facebook" href="https://www.facebook.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a aria-label="go to linkedin" href="https://www.linkedin.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <div class="category category-oop">OOP</div>
+                        </div>
+                    </header>
+                    <div class="py-3">
+                        <p class="l-para">Inheritance is an Object Oriented Programming (OOP) feature that allows the
+                            properties of an object to be used by
+                            different objects.</p>
+                        <figure>
+                            <img src="../images/inheritance/inheritance-poster.png" alt="">
+                            <figcaption>taken from <a href="https://realpython.com/" class="ref"
+                                    target="_blank">https://realpython.com/</a>
+                            </figcaption>
+                        </figure>
+                        <ol>
+                            <li>A written class can be inherited by another class.
+                            </li>
+                            <li>When this process is done, all properties of the base class are transferred to the new
+                                class.
+                            </li>
+                            <li>Reusability of the written code is ensured.
+                            </li>
+                            <li>A base class is the parent class of a derived class.
+                            </li>
+                            <li>The parent class of derived class is called Base Class, and the inherited class is
+                                called the Derived Class.
+                            </li>
+                        </ol>
+                        <p>In Java, three inheritance types supports:
+                        </p>
+                        <ol>
+                            <li>Single Inheritance
+                            </li>
+                            <li>Multilevel Inheritance
+                            </li>
+                            <li>Hierarchical Inheritance
+                            </li>
+                        </ol>
+                        <p>In C++, five inheritance types supports:
+                        </p>
+                        <ol>
+                            <li>Single Inheritance
+                            </li>
+                            <li>Multilevel Inheritance
+                            </li>
+                            <li>Hierarchical Inheritance
+                            </li>
+                            <li>Multilevel Inheritance
+                            </li>
+                            <li>Hybrid Inheritance
+                            </li>
+                        </ol>
+                        <blockquote>Note: Multiple inheritance is not supported in Java through class.
+                        </blockquote>
+                        <p>Derived class syntax for Java:
+                        </p>
+                        <pre>
+<code>
+    class derivedClass extends baseClass
+    {
+        // body of the derivedClass.
+    }
+</code>
+</pre>
+                        <p>An example derived class syntax for Java:
+                        </p>
+                        <pre>
+<code>
+    class Dog extends Animal
+    {
+        // body of the Dog Class.
+    }
+</code>
+</pre>
+                        <p>Derived class syntax for C++:
+                        </p>
+                        <pre>
+<code>
+    class derivedClass : visibilityMode baseClass
+    {
+        // body of the derivedClass.
+    }
+</code>
+</pre>
+                        <p>An example derived class syntax for C++:
+                        </p>
+                        <pre>
+<code>
+    class Dog : public Animal
+    {
+        // body of the Dog Class.
+    }
+</code>
+</pre>
+                        <h3>Accessibility of Variables
+                        </h3>
+                        <table>
+                            <tr>
+                                <th>Access</th>
+                                <th>Public</th>
+                                <th>Protected</th>
+                                <th>Private</th>
+                            </tr>
+                            <tr>
+                                <td>Same class</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Derived classes</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Outside classes</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>No</td>
+                            </tr>
+                        </table>
+                        <h3>Visibility Mode in C++
+                        </h3>
+                        <table>
+                            <tr>
+                                <td></td>
+                                <td>Derived Class</td>
+                                <td>Derived Class</td>
+                                <td>Derived Class</td>
+                            </tr>
+                            <tr>
+                                <th>Base Class</th>
+                                <th>Private</th>
+                                <th>Protected</th>
+                                <th>Public</th>
+                            </tr>
+                            <tr>
+                                <th>Private</th>
+                                <td>Not Inherited</td>
+                                <td>Not Inherited</td>
+                                <td>Not Inherited
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Protected</th>
+                                <td>Private</td>
+                                <td>Protected</td>
+                                <td>Protected</td>
+                            </tr>
+                            <tr>
+                                <th>Public</th>
+                                <td>Private</td>
+                                <td>Protected</td>
+                                <td>Public</td>
+                            </tr>
+                        </table>
+                        <h3>Inheritance Types
+                        </h3>
+                        <h4>1- Single Inheritance
+                        </h4>
+                        <p>Single inheritance enables a derived class to inherit properties and behavior from a single
+                            parent class.
+                        </p>
+                        <figure>
+                            <img src="../images/inheritance/single-inheritance.png" alt="" class="img-size">
+                            <figcaption>UML for Single Inheritance
+                            </figcaption>
+                        </figure>
+                        <p>Let&apos;s see Single Inheritance Code
+                        </p>
+                        <pre>
+<code>
+    #pragma once
+    #include&lt;iostream&gt;
+        
+    class Animal
+    {
+        private:
+            std::string type = "Animal";
+        protected:
+            std::string name = "Animal";
+        public:
+            Animal() {
+                std::cout &lt;&lt; "This is an Animal!" &lt;&lt; std::endl; 
+            } 
+            ~Animal() { 
+                std::cout &lt;&lt; "Animal is deleting..." &lt;&lt; std::endl; 
+            }
+            void move() { 
+                std::cout &lt;&lt; "Moving... - Animal" &lt;&lt; std::endl; 
+            } 
+            void speak() { 
+                std::cout&lt;&lt; "Speaking... - Animal" &lt;&lt; std::endl; 
+            } 
+            void eat() { 
+                std::cout &lt;&lt; "Eating... - Animal" &lt;&lt; std::endl; 
+            }
+            std::string getName() { 
+                return name; 
+            } 
+            std::string getType() { 
+                return type; 
+            } 
+    }; 
+            
+    class Dog : public Animal {
+        public: 
+            Dog() { 
+                std::cout &lt;&lt; "This is a Dog!" &lt;&lt; std::endl; 
+                name="Spike" ; 
+            } 
+            ~Dog() { 
+                std::cout&lt;&lt; "The Dog is deleting..." &lt;&lt; std::endl; 
+            } 
+            // override 
+            void move() { 
+                std::cout &lt;&lt; "The Dog is running." &lt;&lt;std::endl; 
+            } 
+            // override 
+            void speak() { 
+                std::cout &lt;&lt; "Woof! Woof! Woof!" &lt;&lt; std::endl; 
+            } 
+    }; 
+                
+    int main() {
+        std::cout &lt;&lt; "---------- For Animal ----------" &lt;&lt; std::endl; 
+        Animal animal; 
+        animal.move(); 
+        animal.speak();
+        animal.eat(); 
+        std::cout &lt;&lt; "Type: " &lt;&lt; animal.getType() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; "Name: " &lt;&lt; animal.getName() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; "------------ For Dog ------------" &lt;&lt; std::endl; 
+            
+        Dog dog; 
+        dog.move(); 
+        dog.speak();
+        dog.eat(); 
+        std::cout &lt;&lt; "Type: " &lt;&lt; dog.getType() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; "Name: " &lt;&lt; dog.getName() &lt;&lt;std::endl; 
+        std::cout &lt;&lt; std::endl &lt;&lt; std::endl; 
+        return 0; 
+    }
+</code>
+</pre>
+                        <p>
+                            When we look at the UML table, it is seen that the Dog class does not have the eat() method,
+                            but the Dog class has this
+                            method because it inherits from the Animal class. When this method is called in Main
+                            function, the eat() method of the
+                            inherited Animal class is called.
+
+                        </p>
+                        <p>When we look at the table again, the Dog class has move() and speak() methods. Although these
+                            methods are in the
+                            inherited class, they have been rewritten using &apos;OVERRIDE&apos;. For this reason, when
+                            these
+                            methods are called in main, the
+                            related class&apos;s move() or speak() class is called.
+                        </p>
+                        <p><strong>Output of the code:
+                            </strong></p>
+                        <pre>
+<samp>
+    ---------- For Animal ----------
+    This is an Animal!
+    Moving... - Animal
+    Speaking... - Animal
+    Eating... - Animal
+    Type: Animal
+    Name: Animal
+    ------------ For Dog ------------
+    This is an Animal!
+    This is a Dog!
+    The Dog is running.
+    Woof! Woof! Woof!
+    Eating... - Animal
+    Type: Animal
+    Name: Spike
+    The Dog is deleting...
+    Animal is deleting...
+    Animal is deleting...
+</samp>
+</pre>
+                        <h4>2- Multilevel Inheritance
+                        </h4>
+                        <p>Multilevel inheritance refers to a mechanism in OOP where a class can inherit from a derived
+                            class, thus making that
+                            derived class the base class for the new class.
+                        </p>
+                        <figure>
+                            <img src="../images/inheritance/multilevel-inheritance.png" alt="" class="img-size">
+                            <figcaption>UML for Multilevel Inheritance
+                            </figcaption>
+                        </figure>
+                        <p>Let&apos;s see Multilevel Inheritance Code
+                        </p>
+                        <pre>
+<code>
+    #pragma once
+    #include&lt;iostream&gt;
+
+    class Animal
+    {
+        private:
+            std::string type = "Animal";
+        protected:
+            std::string name = "Animal";
+        public:
+            Animal() {
+                std::cout &lt;&lt; "This is an Animal!" &lt;&lt; std::endl; 
+            } 
+            ~Animal() { 
+                std::cout &lt;&lt; "Animal is deleting..." &lt;&lt; std::endl; 
+            }
+            void move() { 
+                std::cout &lt;&lt; "Moving... - Animal" &lt;&lt; std::endl; 
+            } 
+            void speak() { 
+                std::cout&lt;&lt; "Speaking... - Animal" &lt;&lt; std::endl; 
+            } 
+            void eat() { 
+                std::cout &lt;&lt; "Eating... - Animal" &lt;&lt; std::endl; 
+            }
+            std::string getName() { 
+                return name; 
+            } 
+            std::string getType() { 
+                return type; 
+            } 
+        }; 
+        
+    class Dog : public Animal {
+        public: 
+            Dog() { 
+                std::cout &lt;&lt; "This is a Dog!" &lt;&lt; std::endl;
+                name="Spike"; 
+            } 
+            ~Dog() { 
+                std::cout&lt;&lt; "The Dog is deleting..." &lt;&lt;std::endl; 
+            } 
+            // override 
+            void move() { 
+                std::cout &lt;&lt; "The Dog is running." &lt;&lt;std::endl; 
+            } 
+            // override 
+            void speak() { 
+                std::cout &lt;&lt; "Woof! Woof! Woof!" &lt;&lt;std::endl; 
+            } 
+    }; 
+    
+    class BabyDog :public Dog { 
+        public: 
+            BabyDog() { 
+                std::cout &lt;&lt; "This is a Baby Dog!" &lt;&lt; std::endl; 
+                name="Tyke" ; 
+            } 
+            ~BabyDog() {
+                std::cout &lt;&lt; "The Baby Dog is deleting..." &lt;&lt; std::endl; 
+            } 
+            // override 
+            void speak() { 
+                std::cout&lt;&lt; "Weef! Weef! Weef!" &lt;&lt; std::endl; 
+            } 
+        private: 
+    }; 
+            
+    int main() { 
+        std::cout &lt;&lt; "---------- For Animal ----------"&lt;&lt; std::endl; 
+        Animal animal; 
+        animal.move(); 
+        animal.speak(); 
+        animal.eat(); 
+        std::cout &lt;&lt; "Type: " &lt;&lt;animal.getType() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; "Name: " &lt;&lt; animal.getName() &lt;&lt; std::endl; 
+        std::cout&lt;&lt; "------------ For Dog ------------" &lt;&lt; std::endl; 
+        Dog dog; 
+        dog.move(); 
+        dog.speak(); 
+        dog.eat(); 
+        std::cout&lt;&lt; "Type: " &lt;&lt; dog.getType() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; "Name: " &lt;&lt; dog.getName() &lt;&lt; std::endl; 
+        std::cout&lt;&lt; "------------ For Baby Dog ------------" &lt;&lt; std::endl; 
+        BabyDog babyDog; 
+        babyDog.move(); 
+        babyDog.speak();
+        babyDog.eat(); 
+        std::cout &lt;&lt; "Type: " &lt;&lt; babyDog.getType() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; "Name: " &lt;&lt;babyDog.getName() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; std::endl &lt;&lt; std::endl; 
+        return 0; 
+    }
+</code>
+</pre>
+                        <p><strong>Output of the code:
+                            </strong></p>
+                        <pre>
+<samp>
+    ---------- For Animal ----------
+    This is an Animal!
+    Moving... - Animal
+    Speaking... - Animal
+    Eating... - Animal
+    Type: Animal
+    Name: Animal
+    ------------ For Dog ------------
+    This is an Animal!
+    This is a Dog!
+    The Dog is running.
+    Woof! Woof! Woof!
+    Eating... - Animal
+    Type: Animal
+    Name: Spike
+    ------------ For Baby Dog ------------
+    This is an Animal!
+    This is a Dog!
+    This is a Baby Dog!
+    The Dog is running.
+    Weef! Weef! Weef!
+    Eating... - Animal
+    Type: Animal
+    Name: Tyke
+    The Baby Dog is deleting...
+    The Dog is deleting...
+    Animal is deleting...
+    The Dog is deleting...
+    Animal is deleting...
+    Animal is deleting...
+</samp>
+</pre>
+
+                        <h4>3- Hierarchical Inheritance
+                        </h4>
+                        <p>When several classes are derived from same base class it is called hierarchical inheritance.
+                        </p>
+                        <figure>
+                            <img src="../images/inheritance/hierarchical-inheritance.png" alt="" class="img-size">
+                            <figcaption>UML for Hierarchical Inheritance
+                            </figcaption>
+                        </figure>
+
+                        <p>Let&apos;s see Hierarchical Inheritance Code
+                        </p>
+                        <pre>
+<code>
+    #pragma once
+    #include&lt;iostream&gt;
+    
+    class Animal
+    {
+        private:
+            std::string type = "Animal";
+        protected:
+            std::string name = "Animal";
+        public:
+            Animal() {
+                std::cout &lt;&lt; "This is an Animal!" &lt;&lt; std::endl; 
+            } 
+            ~Animal() { 
+                std::cout &lt;&lt; "Animal is deleting..." &lt;&lt; std::endl; 
+            }
+            void move() { 
+                std::cout &lt;&lt; "Moving... - Animal" &lt;&lt; std::endl; 
+            } 
+            void speak() { 
+                std::cout&lt;&lt; "Speaking... - Animal" &lt;&lt; std::endl; 
+            } 
+            void eat() { 
+                std::cout &lt;&lt; "Eating... - Animal" &lt;&lt; std::endl; 
+            }
+            std::string getName() { 
+                return name; 
+            } 
+            std::string getType() { 
+                return type; 
+            } 
+    }; 
+        
+    class Dog : public Animal {
+        public: 
+            Dog() { 
+                std::cout &lt;&lt; "This is a Dog!" &lt;&lt; std::endl; 
+                name="Spike" ; 
+            } 
+            ~Dog() { 
+                std::cout&lt;&lt; "The Dog is deleting..." &lt;&lt; std::endl; 
+            } 
+            // override 
+            void move() { 
+                std::cout &lt;&lt; "The Dog is running." &lt;&lt;std::endl; 
+            } 
+            // override 
+            void speak() { 
+                std::cout &lt;&lt; "Woof! Woof! Woof!" &lt;&lt; std::endl; 
+            } 
+    }; 
+        
+    class Bird : public Animal { 
+        public: 
+            Bird() { 
+                std::cout &lt;&lt; "This is a Bird!" &lt;&lt; std::endl; name="Tweety" ; 
+            } 
+            ~Bird() { 
+                std::cout&lt;&lt; "The Bird is deleting..." &lt;&lt; std::endl; 
+            } 
+            void move() { 
+                std::cout &lt;&lt; "The Bird is flying." &lt;&lt; std::endl; 
+            }
+            void speak() { 
+                std::cout &lt;&lt; "Chirp! Chirp!" &lt;&lt; std::endl; 
+            } 
+    }; 
+        
+    class Fish : public Animal { 
+        public: 
+            Fish() {
+                std::cout &lt;&lt; "This is a Fish!" &lt;&lt; std::endl; 
+                name="Nemo" ; 
+            } 
+            ~Fish() { 
+                std::cout &lt;&lt; "The Fish is deleting..." &lt;&lt;std::endl; 
+            } 
+            void move() { 
+                std::cout &lt;&lt; "The Fish is swimming." &lt;&lt; std::endl; 
+            } 
+    }; 
+        
+    int main() { 
+        std::cout&lt;&lt; "---------- For Animal ----------" &lt;&lt; std::endl; 
+        Animal animal; 
+        animal.move(); 
+        animal.speak(); 
+        animal.eat();
+        std::cout &lt;&lt; "Type: " &lt;&lt; animal.getType() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; "Name: " &lt;&lt; animal.getName() &lt;&lt; std::endl;
+        std::cout &lt;&lt; "------------ For Dog ------------" &lt;&lt; std::endl; 
+        Dog dog; 
+        dog.move(); 
+        dog.speak(); 
+        dog.eat();
+        std::cout &lt;&lt; "Type: " &lt;&lt; dog.getType() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; "Name: " &lt;&lt; dog.getName() &lt;&lt; std::endl;
+        std::cout &lt;&lt; "----------- For Bird -----------" &lt;&lt; std::endl; 
+        Bird bird; 
+        bird.move(); 
+        bird.speak(); 
+        bird.eat();
+        std::cout &lt;&lt; "Type: " &lt;&lt; bird.getType() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; "Name: " &lt;&lt; bird.getName() &lt;&lt; std::endl;
+        std::cout &lt;&lt; "----------- For Fish -----------" &lt;&lt; std::endl; 
+        Fish fish; 
+        fish.move(); 
+        fish.speak(); 
+        fish.eat();
+        std::cout &lt;&lt; "Type: " &lt;&lt; fish.getType() &lt;&lt; std::endl; 
+        std::cout &lt;&lt; "Name: " &lt;&lt; fish.getName(); &lt;&lt; std::endl;
+        std::cout &lt;&lt;std::endl &lt;&lt; std::endl; 
+        return 0; 
+    }
+</code>
+</pre>
+
+                        <p>When we look at the UML table, it is seen that the Dog and Bird classes do not have the eat()
+                            method, while the Fish
+                            class does not have eat() and speak() methods. All three classes have these methods because
+                            they inherit from the Animal
+                            class.
+                        </p>
+
+                        <p>When these methods are called in Main, the eat() and speak() methods of the inherited Animal
+                            class are called.
+                        </p>
+                        <p>When we look at the table again, the Dog and Bird have move() and speak() methods, and the
+                            Fish class has the move()
+                            method. Although these methods are in the inherited class, they have been rewritten using
+                            &apos;OVERRIDE&apos;. For this reason,
+                            when these methods are called in main, the related class&apos;s move() or speak() class is
+                            called.
+                        </p>
+                        <p><strong>Output of the code:
+                            </strong></p>
+                        <pre>
+<samp>
+    ---------- For Animal ----------
+    This is an Animal!
+    Moving... - Animal
+    Speaking... - Animal
+    Eating... - Animal
+    Type: Animal
+    Name: Animal
+    ------------ For Dog ------------
+    This is an Animal!
+    This is a Dog!
+    The Dog is running.
+    Woof! Woof! Woof!
+    Eating... - Animal
+    Type: Animal
+    Name: Spike
+    ----------- For Bird -----------
+    This is an Animal!
+    This is a Bird!
+    The Bird is flying.
+    Chirp! Chirp!
+    Eating... - Animal
+    Type: Animal
+    Name: Tweety
+    ----------- For Fish -----------
+    This is an Animal!
+    This is a Fish!
+    The Fish is swimming.
+    Speaking... - Animal
+    Eating... - Animal
+    Type: Animal
+    Name: Nemo
+    The Fish is deleting...
+    Animal is deleting...
+    The Bird is deleting...
+    Animal is deleting...
+    The Dog is deleting...
+    Animal is deleting...
+    Animal is deleting...
+
+</samp>
+</pre>
+
+                        <h4>4- Multiple Inheritance
+                        </h4>
+                        <p>When an object or a class can inherit characteristics and features from more than one parent
+                            class, it is called
+                            Multiple inheritance.
+                        </p>
+                        <figure>
+                            <img src="../images/inheritance/multiple-inheritance.png" alt="" class="img-size">
+                            <figcaption>UML for Multiple Inheritance
+                            </figcaption>
+                        </figure>
+                        <p>Let&apos;s see Multiple Inheritance Code
+                        </p>
+                        <pre>
+<code>
+    #pragma once
+    #include&lt;iostream&gt;
+    
+    class B
+    {
+        public:
+            B() {
+                std::cout &lt;&lt; "This is constructor for B class." &lt;&lt; std::endl; 
+            }; 
+            ~B() { 
+                std::cout&lt;&lt; "This is destructor for B class." &lt;&lt; std::endl; 
+            }; 
+            void function() { 
+                std::cout &lt;&lt; "Function of B class" &lt;&lt;std::endl; 
+            } 
+        private: 
+    }; 
+    
+    class C 
+    { 
+        public: 
+            C() { 
+                std::cout &lt;&lt; "This is constructor for C class." &lt;&lt; std::endl;
+            }; 
+            ~C() { 
+                std::cout &lt;&lt; "This is destructor for C class." &lt;&lt; std::endl; 
+            }; 
+            void function() { 
+                std::cout&lt;&lt; "Function of C class" &lt;&lt; std::endl; 
+            } 
+        private: 
+    }; 
+    
+    class A : public B, public C { 
+        public: 
+            A() { 
+                std::cout&lt;&lt; "This is constructor for A class." &lt;&lt; std::endl; 
+            }; 
+            ~A() { 
+                std::cout &lt;&lt; "This is destructor for A class." &lt;&lt;std::endl; 
+            }; 
+        
+        private: 
+    }; 
+    
+    int main() { 
+        A a; 
+        std::cout &lt;&lt; std::endl; 
+        a.C::function(); 
+        a.B::function(); 
+        std::cout&lt;&lt; std::endl; 
+        return 0; 
+    }
+</code>
+</pre>
+
+                        <p>When we look the main function, we created an A Class object and we call function() method
+                            that is inherited from Class
+                            C and Class B. The compiler can not know which inherited function() method have to call. For
+                            this reason, we specified
+                            that which method of class will be called.
+                        </p>
+                        <pre>
+<code>
+    a.C::function();
+    a.B::function();
+</code>
+</pre>
+
+                        <p><strong>Output of the code:
+                            </strong></p>
+
+                        <pre>
+<samp>
+    This is constructor for B class.
+    This is constructor for C class.
+    This is constructor for A class.
+    Function of C class
+    Function of B class
+    This is destructor for A class.
+    This is destructor for C class.
+    This is destructor for B class.
+</samp>
+</pre>
+
+                        <h4>5- Hybrid Inheritance
+                        </h4>
+                        <p>Hybric inheritance is a combination of multiple inheritance and multilevel inheritance. A
+                            class is derived from two
+                            classes as in multiple inheritance.
+                        </p>
+                        <figure>
+                            <img src="../images/inheritance/hybrid-inheritance.png" alt="" class="img-size">
+                            <figcaption>UML for Hybrid Inheritance
+                            </figcaption>
+                        </figure>
+
+                        <p>Let&apos;s see Hybrid Inheritance Code
+                        </p>
+
+                        <pre>
+<code>
+    #pragma once
+    #include&lt;iostream&gt;
+    
+    class D
+    {
+        public:
+            D() {
+                std::cout &lt;&lt; "This is constructor for D class." &lt;&lt; std::endl; 
+            }; 
+            
+            ~D() { 
+                std::cout&lt;&lt; "This is destructor for D class." &lt;&lt; std::endl; 
+            }; 
+        
+        protected: 
+            int variable=123456; 
+    }; 
+    
+    class B : virtual public D { 
+        public: 
+            B() { 
+                std::cout &lt;&lt; "This is constructor for B class." &lt;&lt; std::endl; 
+            }; 
+            
+            ~B() { 
+                std::cout&lt;&lt; "This is destructor for B class." &lt;&lt; std::endl; 
+            }; 
+        
+        private: 
+    }; 
+    
+    class C : virtual public D { 
+        public: 
+            C() {
+                std::cout &lt;&lt; "This is constructor for C class." &lt;&lt; std::endl; 
+            }; 
+            ~C() { 
+                std::cout&lt;&lt; "This is destructor for C class." &lt;&lt; std::endl; 
+            }; 
+        private: 
+    }; 
+    
+    class A : public B, public C { 
+        public: 
+            A() {
+                std::cout &lt;&lt; "This is constructor for A class." &lt;&lt; std::endl; 
+            }; 
+            
+            ~A() { 
+                std::cout&lt;&lt; "This is destructor for A class." &lt;&lt; std::endl; 
+            }; 
+            
+            void function() { 
+                std::cout &lt;&lt; "Variable: " &lt;&lt; variable &lt;&lt;std::endl; 
+            } 
+            
+        private: 
+    }; 
+    
+    int main() { 
+        A a; 
+        std::cout &lt;&lt; std::endl; 
+        a.function(); 
+        std::cout &lt;&lt; std::endl; 
+        return 0; 
+    }
+</code>
+</pre>
+                        <p>When we look the A Class&apos;s function() method, we use variable that is inherited class B
+                            or
+                            class C. Compiler do not know
+                            that which class&apos;s variable have to inherit. For this reason, we use virtual keyword.
+                            We say
+                            to the compiler that only
+                            inherit one member thanks to virtual keyword.
+                        </p>
+
+                        <pre>
+<code>
+    class B : virtual public D,
+    ......
+    class C : virtual public D
+    ......
+</code>
+</pre>
+
+                        <p><strong>Output of the code:
+                            </strong></p>
+
+                        <pre>
+<samp>
+    This is constructor for D class.
+    This is constructor for B class.
+    This is constructor for C class.
+    This is constructor for A class.
+    Variable: 123456
+    This is destructor for A class.
+    This is destructor for C class.
+    This is destructor for B class.
+    This is destructor for D class.
+</samp>
+</pre>
+
+                    </div>
+
+                </article>
+
+                <aside id="about" class="card">
+                    <img src="../images/avatar.png" alt="avatar">
+                    <h4>Ajinkya Dhatrak</h4>
+                    <p>Love to explore and learn new concepts.</p>
+                    <a href="#" class="btn btn-dark">Follow</a>
+                </aside>
+
+                <aside id="categories" class="card">
+                    <h2>Categories</h2>
+                    <ul class="list">
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Searching</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Sorting</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> DBMS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OOP</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-dark py-2">
+        <div class="container footer-container">
+            <p>Copyright &copy; 2023, All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

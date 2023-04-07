@@ -1,0 +1,31 @@
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+}
+
+.l-heading {
+  font-size: 2rem;
+}
+
+.l-para {
+  font-size: 1.2rem;
+}
+
+.bold {
+  font-weight: bold;
+}

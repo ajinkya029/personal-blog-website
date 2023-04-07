@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/mobile.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Welcome to MyBlog</title>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="navbar">
+            <h1 class="logo">
+                <a href="./index.html"><span class="text-primary"><i class="fa-solid fa-blog"></i>My</span>Blog</a>
+            </h1>
+            <form action="#">
+                <div class="form-box">
+                    <input type="email" placeholder="Enter your email...">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+            </form>
+        </div>
+        <div class="content">
+            <h1>Ajinkya Dhatrak</h1>
+            <p>SOFTWARE DEVELOPER</p>
+            <form action="#" class="search-bar">
+                <input type="text" placeholder="Search Blog.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+
+        </div>
+    </header>
+
+    <!-- Articles -->
+    <section id="articles" class="py-2">
+        <div class="container">
+            <h2>Articles</h2>
+            <div class="articles-container">
+                <article class="card bg-dark">
+                    <div>
+                        <img src="./images/binary-search/binary-search-poster.png" alt="">
+                        <div class="category category-searching">Searching</div>
+                        <h3>Understanding The Binary Search Algorithm In C++</h3>
+                        <p>Detailed understanding of the working of the binary search algorithm and its implementation
+                            in C++</p>
+                        <a href="./articles/binary-search.html" class="btn btn-light">Read More...</a>
+                    </div>
+                </article>
+                <article class="card bg-dark">
+                    <div>
+                        <img src="./images/linear-search/linear-search-poster.png" alt="">
+                        <div class="category category-searching">Searching</div>
+                        <h3>A Simplified Explanation of Linear Search</h3>
+                        <p>Detailed understanding of the working of the linear search algorithm and its
+                            implementation in C++</p>
+                        <a href="./articles/linear-search.html" class="btn btn-light">Read More...</a>
+                    </div>
+                </article>
+                <article class="card bg-dark">
+                    <div>
+                        <img src="./images/bubble-sort/bubble-sort-poster.png" alt="bubbles">
+                        <div class="category category-sorting">Sorting</div>
+                        <h3>Sorting Algorithms: Bubble Sort
+                        </h3>
+                        <p>Detailed understanding of the working of the Bubble Sort algorithm and its
+                            implementation in C++</p>
+                        <a href="./articles/bubble-sort.html" class="btn btn-light">Read More...</a>
+                    </div>
+                </article>
+                <article class="card bg-dark">
+                    <div>
+                        <img src="./images/insertion-sort/insertion-sort-poster.png" alt="">
+                        <div class="category category-sorting">Sorting</div>
+                        <h3>Sorting Algorithms: Insertion Sort</h3>
+                        <p>Detailed understanding of the working of the Insertion Sort algorithm and its
+                            implementation in C++
+                        </p>
+                        <a href="./articles/insertion-sort.html" class="btn btn-light">Read More...</a>
+                    </div>
+                </article>
+                <article class="card bg-dark">
+                    <div>
+                        <img src="./images/selection-sort/selection-sort-poster.png" alt="">
+                        <div class="category category-sorting">Sorting</div>
+                        <h3>Sorting Algorithms: Selection Sort</h3>
+                        <p>Detailed understanding of the working of the Selection Sort algorithm and its
+                            implementation in C++
+                        </p>
+                        <a href="./articles/selection-sort.html" class="btn btn-light">Read More...</a>
+                    </div>
+                </article>
+                <article class="card bg-dark">
+                    <div>
+                        <img src="./images/operating-system/os-poster.png" alt="">
+                        <div class="category category-os">OS</div>
+                        <h3>Types of Operating System</h3>
+                        <p>An Operating System performs all the basic tasks like managing files,
+                            processes, and memory.</p>
+                        <a href="./articles/os-types.html" class="btn btn-light">Read More...</a>
+                    </div>
+                </article>
+                <article class="card bg-dark">
+                    <div>
+                        <img src="./images/inheritance/inheritance-poster.png" alt="">
+                        <div class="category category-oop">OOP</div>
+                        <h3>What Is Inheritance?</h3>
+                        <p>Inheritance is an Object Oriented Programming (OOP) feature that allows the
+                            properties of an object to be used by
+                            different objects.</p>
+                        <a href="./articles/inheritance.html" class="btn btn-light">Read More...</a>
+                    </div>
+                </article>
+                <article class="card bg-dark">
+                    <div>
+                        <img src="./images/database-languages/database-poster.png" alt="">
+                        <div class="category category-dbms">DBMS</div>
+                        <h3>Database Languages</h3>
+                        <p>The SQL commands are mainly categorized into five categories</p>
+                        <a href="./articles/database-languages.html" class="btn btn-light">Read More...</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-dark py-2">
+        <div class="container footer-container">
+            <p>Copyright &copy; 2023, All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mobile.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Sorting Algorithms: Bubble Sort</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="navbar">
+        <h1 class="logo">
+            <a href="../index.html"><span class="text-primary"><i class="fa-solid fa-blog"></i>My</span>Blog</a>
+        </h1>
+        <form action="#">
+            <div class="form-box">
+                <input type="email" placeholder="Enter your email...">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Article -->
+    <div id="article">
+        <div class="container">
+            <div class="page-container">
+                <article class="card">
+                    <header>
+                        <h2 class="l-heading bold">Sorting Algorithms: Bubble Sort
+                        </h2>
+                        <div class="meta">
+                            <small>
+                                <i class="fas fa-user"></i> Written By Ajinkya Dhatrak March 30, 2023
+                            </small>
+                            <div class="socials">
+                                <a aria-label="go to twitter" href="https://twitter.com/" target="_blank" class="ref"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a aria-label="go to facebook" href="https://www.facebook.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a aria-label="go to linkedin" href="https://www.linkedin.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <div class="category category-sorting">Sorting</div>
+                        </div>
+                    </header>
+                    <p class="l-para">Detailed understanding of the working of the Bubble Sort algorithm and its
+                        implementation in C++</p>
+                    <figure>
+                        <img src="../images/bubble-sort/bubble-sort-poster.png" alt="">
+                        <figcaption>Photo by <a href="https://unsplash.com/@marcsm" class="ref" target="_blank">Marc
+                                Sendra Martorell
+                            </a> on <a href="https://unsplash.com/" class="ref" target="_blank">Unsplash</a>
+                        </figcaption>
+                    </figure>
+                    <div class="py-3">
+                        <p>In this article, I&apos;ll be covering bubble sort algorithm. Most programming languages will
+                            come
+                            with a built-in sort function
+                            but in order to write better code, you need to know what&apos;s going on in the background.
+                            If
+                            you are preparing for software
+                            engineering interviews, it&apos;s very likely that this sorting algorithm may come
+                            up
+                            during your interviews.</p>
+
+                        <h3>What is a Bubble Sort?</h3>
+                        <p>Bubble sort is one of the simplest and intuitive sorting algorithms to understand. Its
+                            implementation in code is fairly
+                            straightforward as well. One of the great things about Bubble Sort is that learning it
+                            teaches you a lot about
+                            complexity analysis and will prepare you to understand more difficult and more optimal
+                            sorting algorithms.</p>
+
+                        <blockquote>
+                            <p>
+                                <strong>
+                                    Fancy algorithms are slow when N is small, and N is usually small.
+                                </strong>
+                            </p>
+                            <p>
+                                <strong>
+                                    - Rob Pike
+                                </strong>
+                            </p>
+                        </blockquote>
+                        <h3>How Does It Work?</h3>
+                        <p>Let&apos;s have a look at the array we want to sort:
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-1.png" alt="">
+                        <p>We want to sort this array in ascending order.</p>
+                        <p>In Bubble Sort, we iterate through the array multiple times and swap values until they are
+                            all in the correct order.
+                            More specifically, when we iterate through the array, we check if the current number is
+                            greater than the number adjacent
+                            to it. If so, we swap the two numbers in-place.</p>
+                        <p>Doing these swaps in-place is important to note. <em class="bold">We do not need extra memory
+                                to perform
+                                Bubble Sort.</em></p>
+
+                        <p>After we traverse through the whole array, we check if any swaps have been done during the
+                            iteration. If we have done
+                            swaps, we need to iterate through the array again to make sure everything is sorted. If any
+                            values are still not
+                            ordered, we perform swaps again and we repeat the process of traversing the whole array
+                            until it is completely sorted
+                            and no more swaps are needed. Visualizing this process makes it even clearer:</p>
+                        <p>Let&apos;s start at the beginning of our array. Our current value is 6:
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-2.png" alt="">
+                        <p>Is 6 less than or equal to 3? (i.e. Are they in the correct order?). No, so we need to swap
+                            the two values.</p>
+                        <img src="../images/bubble-sort/bubble-sort-working-3.png" alt="">
+
+                        <p>Our current value is now at position 1. Let&apos;s look at the next value to the right. Is 6
+                            less
+                            than or equal to 9? Yes. At
+                            this point, 6 will remain at this position and we change our current value to 9.</p>
+                        <img src="../images/bubble-sort/bubble-sort-working-4.png" alt="">
+                        <p>9 is greater than 8. Let&apos;s swap them.
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-5.png" alt="">
+                        <p>9 is greater than 4. Let&apos;s swap.
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-6.png" alt="">
+                        <p>9 is greater than 6. Let&apos;s swap.
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-7.png" alt="">
+
+                        <p>9 is greater than 5. Let&apos;s swap.
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-8.png" alt="">
+                        <p>9 is greater than 2. Let&apos;s swap.
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-9.png" alt="">
+
+                        <p>9 does not have any values to swap with. Its <em class="bold">Bubbled Up</em> to the end of
+                            our array.
+                            This is the
+                            essence of Bubble Sort.
+                            Larger values bubble up to the end of the array until the array is sorted.</p>
+                        <p>At this point, we have completed one iteration in the array. We ask ourselves, did we do any
+                            swaps during the iteration?
+                            We did lots. In this case, we need to go back and check our array to see if sorting has been
+                            completed. Visually, we see
+                            that it hasn&apos;t of course, but the way to know this in our code is to track swaps.</p>
+                        <p>Sorted values are colored blue. We do not need to work on these values anymore. Let&apos;s go
+                            through the rest of this array.
+                            Our next current value is back at the beginning. Current value = 3.</p>
+                        <img src="../images/bubble-sort/bubble-sort-working-10.png" alt="">
+                        <p>3 is less than 6. We won&apos;t do anything with it. We see that 6 is also less than 8. We
+                            won&apos;t
+                            do anything with that
+                            either. Let&apos;s move on to 8.</p>
+                        <p>Visually, we see that 8 is greater than all the values to its right until it reaches our
+                            sorted 9. 8 will swap with
+                            every value just like 9 did until it reaches the position just before 9, completing the
+                            iteration.</p>
+                        <p>So, did we perform any swaps? Yes. So let&apos;s go for another round.
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-11.png" alt="">
+                        <p>Like before, 3 is less than 6 so it stays in place and we move on to our next value.
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-12.png" alt="">
+                        <p>6 swaps with 4. We now compare 6 and 6. Is 6 greater than 6? No. Our current 6 at index 2
+                            will remain there and change
+                            our current value to the next 6 at index 3.
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-13.png" alt="">
+                        <p>We can see visually that our current value will bubble up to just before the 8. We check if
+                            we have performed swaps, and
+                            indeed we have so let&apos;s start again:
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-14.png" alt="">
+                        <p>And another round:
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-15.png" alt="">
+                        <p>And another:
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-16.png" alt="">
+                        <p>Almost there:
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-17.png" alt="">
+                        <p>Last one!
+                        </p>
+                        <img src="../images/bubble-sort/bubble-sort-working-18.png" alt="">
+                        <p>2 cannot be swapped with anything so our swaps are zero for this round. This means we are
+                            done!</p>
+
+                        <h3>Code</h3>
+                        <pre>
+<code>
+    #include &lt;bits/stdc++.h&gt;
+    using namespace std;
+
+    void bubble_sort(int arr[], int n) {
+        // bubble sort
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = 0; j &lt;= i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        cout &lt;&lt; "After Using bubble sort: " &lt;&lt; "\n";
+        for (int i = 0; i &lt; n; i++) {
+            cout &lt;&lt; arr[i] &lt;&lt; " ";
+        }
+        cout &lt;&lt; "\n";
+    }
+
+    int main()
+    {
+        int arr[] = {13, 46, 24, 52, 20, 9};		
+        int n = sizeof(arr) / sizeof(arr[0]);
+        cout &lt;&lt; "Before Using Bubble Sort: " &lt;&lt; endl;
+        for (int i = 0; i &lt; n; i++)
+        {
+            cout &lt;&lt; arr[i] &lt;&lt; " ";
+        }
+        cout &lt;&lt; endl;
+
+        bubble_sort(arr, n);
+        return 0;
+    
+    }
+</code>
+</pre>
+                        <h3>Output</h3>
+                        <pre>
+<samp>
+    Before Using Bubble Sort:
+    <strong>13 46 24 52 20 9</strong>
+    After Using bubble sort:
+    <strong>9 13 20 24 46 52</strong>
+</samp>
+</pre>
+
+                        <h3>Time & Space Complexity</h3>
+                        <p>
+                            Time complexity: <strong>O(N<sup>2</sup>)</strong>, (where N = size of the array), for the
+                            worst, and average
+                            cases.<br>
+                            Space Complexity: <strong>O(1)</strong><br>
+                        </p>
+                    </div>
+                </article>
+
+                <aside id="about" class="card">
+                    <img src="../images/avatar.png" alt="avatar">
+                    <h4>Ajinkya Dhatrak</h4>
+                    <p>Love to explore and learn new concepts.</p>
+                    <a href="#" class="btn btn-dark">Follow</a>
+                </aside>
+
+                <aside id="categories" class="card">
+                    <h2>Categories</h2>
+                    <ul class="list">
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Searching</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Sorting</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> DBMS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OOP</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-dark py-2">
+        <div class="container footer-container">
+            <p>Copyright &copy; 2023, All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

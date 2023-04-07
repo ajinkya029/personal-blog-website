@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mobile.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>A Simplified Explanation of Linear Search</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="navbar">
+        <h1 class="logo">
+            <a href="../index.html"><span class="text-primary"><i class="fa-solid fa-blog"></i>My</span>Blog</a>
+        </h1>
+        <form action="#">
+            <div class="form-box">
+                <input type="email" placeholder="Enter your email...">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Article -->
+    <div id="article">
+        <div class="container">
+            <div class="page-container">
+                <article class="card">
+                    <header>
+                        <h2 class="l-heading bold">A Simplified Explanation of Linear Search
+                        </h2>
+                        <div class="meta">
+                            <small>
+                                <i class="fas fa-user"></i> Written By Ajinkya Dhatrak March 31, 2023
+                            </small>
+                            <div class="socials">
+                                <a aria-label="go to twitter" href="https://twitter.com/" target="_blank" class="ref"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a aria-label="go to facebook" href="https://www.facebook.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a aria-label="go to linkedin" href="https://www.linkedin.com/" target="_blank"
+                                    class="ref"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <div class="category category-searching">Searching</div>
+                        </div>
+                    </header>
+                    <p class="l-para">Detailed understanding of the working of the linear search algorithm and its
+                        implementation in C++</p>
+                    <figure>
+                        <img src="../images/linear-search/linear-search-poster.png" alt="">
+                        <figcaption>Photo by <a href="https://unsplash.com/@evgenit" class="ref" target="_blank">Evgeni
+                                Tcherkasski
+                            </a> on <a href="https://unsplash.com/" class="ref" target="_blank">Unsplash</a>
+                        </figcaption>
+                    </figure>
+                    <div class="py-3">
+                        <p>A Linear Search is the most basic type of searching algorithm. A Linear Search sequentially
+                            moves through your
+                            collection (or <a href="https://en.wikipedia.org/wiki/Data_structure" class="ref"
+                                target="_blank">data structure</a>)
+                            looking for a matching value. In other words, it looks down a
+                            list, one item at a time,
+                            without jumping.</p>
+                        <p>Think of it as a way of finding your way in a phonebook. A Linear Search is starting at the
+                            beginning, reading every
+                            name until you find what you&apos;re looking for.</p>
+                        <blockquote>
+                            <p>
+                                <strong>
+                                    I decry the current tendency to seek patents on algorithms. There are better ways to
+                                    earn a living than to prevent other
+                                    people from making use of one's contributions to computer science.
+                                </strong>
+                            </p>
+                            <p>
+                                <strong>
+                                    — Donald Knuth
+                                </strong>
+                            </p>
+                        </blockquote>
+                        <p>Here is an image of Linear Search: </p>
+                        <figure>
+                            <img src="../images/linear-search/linear-search-working.png" alt="">
+                            <figcaption>Image from <a
+                                    href="https://medium.com/karuna-sehgal/an-simplified-explanation-of-linear-search-5056942ba965"
+                                    class="ref" target="_blank">Medium</a>
+                            </figcaption>
+                        </figure>
+                        <h3>Problem Statement</h3>
+                        <p>Given an array arr[] of n elements, write a function to search a given element x in arr[] and
+                            return the index of
+                            x in the array.</p>
+
+                        <h3>Examples</h3>
+                        <p>
+                            <strong>Input :</strong> arr[] = {10, 20, 30, 50, 60, 80, 110, 130, 140, 170}, x = 110<br>
+                            <strong>Output :</strong> 6<br>
+                            <strong>Explanation :</strong> Element x is present at index 6. <br>
+                        </p>
+                        <p>
+                            <strong>Input :</strong> arr[] = {10, 20, 30, 40, 60, 110, 120, 130, 170}, x = 175<br>
+                            <strong>Output :</strong> -1<br>
+                            <strong>Explanation :</strong> Element x is not present in arr[].<br>
+                        </p>
+
+                        <h3>Algorithm</h3>
+                        <ol>
+                            <li>First, read the search element (Target element) in the array.</li>
+                            <li>Set an integer i = 0 and repeat steps 3 to 4 till i reaches the end of the array.</li>
+                            <li>Match the key with arr[i].</li>
+                            <li>If the key matches, return the index. Otherwise, increment i by 1.</li>
+                        </ol>
+
+                        <h3>Code</h3>
+                        <pre>
+<code>
+    #include &lt;iostream&gt;
+    using namespace std;
+
+    int search(int arr[], int n, int x)
+    {
+        int i;
+        for (i = 0; i &lt; n; i++)
+            if (arr[i] == x)
+                return i;
+        return -1;
+    }
+    
+    // Driver code
+    int main(void)
+    {
+        int arr[] = { 2, 3, 4, 10, 40 };
+        int x = 10;
+        int n = sizeof(arr) / sizeof(arr[0]);
+    
+        // Function call
+        int result = search(arr, n, x);
+        (result == -1) ? cout &lt;&lt; "Element is not present in array" 
+        : cout &lt;&lt; "Element is present at index " &lt;&lt; result;
+        return 0;
+    }
+</code>
+</pre>
+                        <h3>Output</h3>
+                        <pre>
+<samp>
+    Element is present at index 3
+</samp>
+</pre>
+
+                        <h3>Time & Space Complexity</h3>
+                        <p>
+                            Time complexity: <strong>O(N)</strong><br>
+                            Auxiliary Space: <strong>O(1)</strong><br>
+                        </p>
+                    </div>
+                </article>
+
+                <aside id="about" class="card">
+                    <img src="../images/avatar.png" alt="avatar">
+                    <h4>Ajinkya Dhatrak</h4>
+                    <p>Love to explore and learn new concepts.</p>
+                    <a href="#" class="btn btn-dark">Follow</a>
+                </aside>
+
+                <aside id="categories" class="card">
+                    <h2>Categories</h2>
+                    <ul class="list">
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Searching</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Sorting</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> DBMS</a></li>
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> OOP</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer" class="bg-dark py-2">
+        <div class="container footer-container">
+            <p>Copyright &copy; 2023, All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
